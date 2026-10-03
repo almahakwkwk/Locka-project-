@@ -1,0 +1,295 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>LOCKA - الملف الشخصي</title>
+    <style>
+        :root {
+            --primary-dark: #1E3884;
+            --primary-light: #5B87E9;
+            --accent-blue: #A7C7F0;
+            --bg-color: #F3F6FF;
+            --white: #FFFFFF;
+            --text-color: #333333;
+            --gray-light: #E2E7EB;
+        }
+
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+
+        body {
+            background-color: var(--bg-color);
+            color: var(--text-color);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+        }
+
+        .phone-container {
+            width: 390px;
+            height: 844px;
+            background-color: var(--white);
+            border-radius: 40px;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            position: relative;
+            overflow: hidden;
+            border: 8px solid #222;
+        }
+
+        /* رأس الصفحة */
+        .header {
+            padding: 25px 20px 15px;
+            text-align: center;
+            border-bottom: 1px solid var(--gray-light);
+        }
+
+        .header h2 {
+            font-size: 18px;
+            color: var(--primary-dark);
+            font-weight: 700;
+        }
+
+        /* محتوى الملف الشخصي */
+        .profile-content {
+            flex: 1;
+            padding: 20px;
+            overflow-y: auto;
+        }
+
+        .user-info-card {
+            text-align: center;
+            margin-bottom: 25px;
+        }
+
+        .avatar-circle {
+            width: 80px;
+            height: 80px;
+            background-color: var(--bg-color);
+            border: 2px solid var(--primary-light);
+            border-radius: 50%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            margin: 0 auto 12px;
+            color: var(--primary-dark);
+        }
+
+        .avatar-circle svg {
+            width: 45px;
+            height: 45px;
+            fill: var(--primary-dark);
+        }
+
+        .user-name {
+            font-size: 18px;
+            font-weight: bold;
+            color: var(--primary-dark);
+            margin-bottom: 4px;
+        }
+
+        .user-id {
+            font-size: 13px;
+            color: #777;
+        }
+
+        /* قائمة الخيارات */
+        .menu-list {
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+        }
+
+        .menu-item {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            background-color: var(--white);
+            padding: 14px 16px;
+            border-radius: 12px;
+            border: 1px solid var(--gray-light);
+            text-decoration: none;
+            color: var(--text-color);
+            transition: all 0.2s ease;
+        }
+
+        .menu-item:hover {
+            background-color: var(--bg-color);
+            border-color: var(--primary-light);
+        }
+
+        .menu-item-right {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+        }
+
+        .menu-item svg {
+            width: 20px;
+            height: 20px;
+            fill: var(--primary-dark);
+        }
+
+        .menu-item span {
+            font-size: 14px;
+            font-weight: 500;
+        }
+
+        .arrow-icon {
+            font-size: 14px;
+            color: #999;
+        }
+
+        /* شريط التنقل السفلي */
+        .nav-bar {
+            height: 70px;
+            background-color: var(--white);
+            border-top: 1px solid var(--gray-light);
+            display: flex;
+            justify-content: space-around;
+            align-items: center;
+            padding: 0 10px;
+        }
+
+        .nav-item {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            text-decoration: none;
+            color: #888;
+            font-size: 11px;
+            gap: 4px;
+        }
+
+        .nav-item svg {
+            width: 22px;
+            height: 22px;
+            fill: #888;
+        }
+
+        .nav-item.active {
+            color: var(--primary-dark);
+        }
+
+        .nav-item.active svg {
+            fill: var(--primary-dark);
+        }
+    </style>
+</head>
+<body>
+
+    <div class="phone-container">
+        
+        <!-- رأس الصفحة -->
+        <div class="header">
+            <h2>الملف الشخصي</h2>
+        </div>
+
+        <!-- المحتوى -->
+        <div class="profile-content">
+            
+            <!-- معلومات المستخدم -->
+            <div class="user-info-card">
+                <div class="avatar-circle">
+                    <!-- أيقونة مستخدم -->
+                    <svg viewBox="0 0 24 24">
+                        <path d="M12 12c2.21 0 4-1.79 4-4s-1.79-4-4-4-4 1.79-4 4 1.79 4 4 4zm0 2c-2.67 0-8 1.34-8 4v2h16v-2c0-2.66-5.33-4-8-4z"/>
+                    </svg>
+                </div>
+                <div class="user-name">ميمو</div>
+                <div class="user-id">123456789</div>
+            </div>
+
+            <!-- قائمة الخيارات -->
+            <div class="menu-list">
+                
+                <a href="#" class="menu-item">
+                    <div class="menu-item-right">
+                        <!-- أيقونة تفاصيل الحساب -->
+                        <svg viewBox="0 0 24 24"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm0 3c1.66 0 3 1.34 3 3s-1.34 3-3 3-3-1.34-3-3 1.34-3 3-3zm0 14.2c-2.5 0-4.71-1.28-6-3.22.03-1.99 4-3.08 6-3.08 1.99 0 5.97 1.09 6 3.08-1.29 1.94-3.5 3.22-6 3.22z"/></svg>
+                        <span>تفاصيل الحساب</span>
+                    </div>
+                    <span class="arrow-icon">❮</span>
+                </a>
+
+                <a href="#" class="menu-item">
+                    <div class="menu-item-right">
+                        <!-- أيقونة سجل الحجوزات -->
+                        <svg viewBox="0 0 24 24"><path d="M19 3h-1V1h-2v2H8V1H6v2H5c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h14c1.1 0 2-.9 2-2V5c0-1.1-.9-2-2-2zm0 16H5V8h14v11z"/></svg>
+                        <span>سجل الحجوزات</span>
+                    </div>
+                    <span class="arrow-icon">❮</span>
+                </a>
+
+                <a href="#" class="menu-item">
+                    <div class="menu-item-right">
+                        <!-- أيقونة البلاغات -->
+                        <svg viewBox="0 0 24 24"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm1 15h-2v-2h2v2zm0-4h-2V7h2v6z"/></svg>
+                        <span>البلاغات</span>
+                    </div>
+                    <span class="arrow-icon">❮</span>
+                </a>
+
+                <a href="#" class="menu-item">
+                    <div class="menu-item-right">
+                        <!-- أيقونة اللغة -->
+                        <svg viewBox="0 0 24 24"><path d="M12.87 15.07l-2.54-2.51.03-.03c1.74-1.94 2.98-4.17 3.71-6.53H17V4h-7V2H8v2H1v1.99h11.17C11.5 7.92 10.44 9.75 9 11.35 8.07 10.32 7.3 9.19 6.69 8h-2c.73 1.63 1.73 3.17 2.98 4.56l-5.09 5.02L4 19l5-5 3.11 3.11.76-2.04zM18.5 10h-2L12 22h2l1.12-3h4.75L21 22h2l-4.5-12zm-2.62 7l1.62-4.33L19.12 17h-3.24z"/></svg>
+                        <span>اللغة</span>
+                    </div>
+                    <span class="arrow-icon">❮</span>
+                </a>
+
+                <a href="#" class="menu-item">
+                    <div class="menu-item-right">
+                        <!-- أيقونة الإعدادات -->
+                        <svg viewBox="0 0 24 24"><path d="M19.14 12.94c.04-.3.06-.61.06-.94 0-.32-.02-.64-.07-.94l2.03-1.58c.18-.14.23-.41.12-.61l-1.92-3.32c-.12-.22-.37-.29-.59-.22l-2.39.96c-.5-.38-1.03-.7-1.62-.94l-.36-2.54c-.04-.24-.24-.41-.48-.41h-3.84c-.24 0-.43.17-.47.41l-.36 2.54c-.59.24-1.13.57-1.62.94l-2.39-.96c-.22-.08-.47 0-.59.22L2.74 8.87c-.12.21-.08.47.12.61l2.03 1.58c-.05.3-.09.63-.09.94s.02.64.07.94l-2.03 1.58c-.18.14-.23.41-.12.61l1.92 3.32c.12.22.37.29.59.22l2.39-.96c.5.38 1.03.7 1.62.94l.36 2.54c.05.24.24.41.48.41h3.84c.24 0 .44-.17.47-.41l.36-2.54c.59-.24 1.13-.56 1.62-.94l2.39.96c.22.08.47 0 .59-.22l1.92-3.32c.12-.22.07-.47-.12-.61l-2.01-1.58zM12 15.6c-1.98 0-3.6-1.62-3.6-3.6s1.62-3.6 3.6-3.6 3.6 1.62 3.6 3.6-1.62 3.6-3.6 3.6z"/></svg>
+                        <span>الإعدادات</span>
+                    </div>
+                    <span class="arrow-icon">❮</span>
+                </a>
+
+                <a href="#" class="menu-item">
+                    <div class="menu-item-right">
+                        <!-- أيقونة تسجيل الخروج -->
+                        <svg viewBox="0 0 24 24"><path d="M10.09 15.59L11.5 17l5-5-5-5-1.41 1.41L12.67 11H3v2h9.67l-2.58 2.59zM19 3H5c-1.11 0-2 .9-2 2v4h2V5h14v14H5v-4H3v4c0 1.1.89 2 2 2h14c1.1 0 2-.9 2-2V5c0-1.1-.9-2-2-2z"/></svg>
+                        <span style="color: #d9534f;">تسجيل الخروج</span>
+                    </div>
+                    <span class="arrow-icon">❮</span>
+                </a>
+
+            </div>
+
+        </div>
+
+        <!-- شريط التنقل السفلي المطابق لتصميم التطبيق -->
+        <div class="nav-bar">
+            <a href="#" class="nav-item">
+                <svg viewBox="0 0 24 24"><path d="M10 20v-6h4v6h5v-8h3L12 3 2 12h3v8z"/></svg>
+                <span>الرئيسية</span>
+            </a>
+            <a href="#" class="nav-item">
+                <svg viewBox="0 0 24 24"><path d="M19 3h-1V1h-2v2H8V1H6v2H5c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h14c1.1 0 2-.9 2-2V5c0-1.1-.9-2-2-2zm0 16H5V8h14v11z"/></svg>
+                <span>الحجوزات</span>
+            </a>
+            <a href="#" class="nav-item">
+                <svg viewBox="0 0 24 24"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm1 15h-2v-6h2v6zm0-8h-2V7h2v2z"/></svg>
+                <span>التنبيهات</span>
+            </a>
+            <a href="#" class="nav-item active">
+                <svg viewBox="0 0 24 24"><path d="M12 12c2.21 0 4-1.79 4-4s-1.79-4-4-4-4 1.79-4 4 1.79 4 4 4zm0 2c-2.67 0-8 1.34-8 4v2h16v-2c0-2.66-5.33-4-8-4z"/></svg>
+                <span>الملف الشخصي</span>
+            </a>
+        </div>
+
+    </div>
+
+</body>
+</html>
